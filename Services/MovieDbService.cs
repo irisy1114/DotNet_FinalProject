@@ -138,15 +138,6 @@ namespace MovieLibrary.Services
             {
                 logger.Warn("No data in the table.");
             }
-
-            //using (var context = new MovieContext())
-            //{
-            //    var topRatedMovie = context.Movies
-            //        .Include(x => x.UserMovies)
-            //        .ThenInclude(x => x.User)
-            //        .ThenInclude(x => x.Occupation)
-            //        .OrderBy(x => x.Title).ThenBy(x=>x.
-            //}
         }
 
         public void SearchMovie()
@@ -188,7 +179,7 @@ namespace MovieLibrary.Services
         public void UpdateMovie()
         {
             logger.Info("Update movie");
-            Console.WriteLine("\nEnter Movie Title (try 'Lightning Jack (1994)') to Update: ");
+            Console.WriteLine("\nEnter Movie Title to Update: ");
             var movieTitle = Console.ReadLine().ToLower();
             if (!movieTitle.IsNullOrEmpty())
             {
